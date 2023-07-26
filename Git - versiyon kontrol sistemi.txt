@@ -1,0 +1,69 @@
+Git -> versiyon kontrol sistemi (VCS)
+
+#####git temel kodları
+
+touch text.txt (text.txt oluşturdu)
+
+git log  (commitleri kim ne zaman atmış gösterir)
+git status (git ne durumda)
+git add  (git e ekleme yapar)
+git commit (commit atılacağı zaman atılır)
+git init (git olmayan dosyada git açar)
+
+git commit -m"mesaj buraya yazılır"
+
+git restore test1.txt (sadece 1 dosyayı önceki commit e döndürdü)
+
+git branch (hangi branchin üstünde olduğumuzu gösterir, diğer tüm branchleri görmemizi sağlar)
+git branch chapter2 (chapter2 adlı yeni bir branch oluşturuldu)
+
+$ git branch
+  chapter2
+* master	(* olanın içindeyiz)
+
+git checkout chapter2 (checkout commitler arasında gezinirken de kullanılıyor, değiştirdi)
+git chechout commitIDsi (commitler arası gezinme)
+
+git switch chapter2 (chapter2'ye değiştirdi)
+
+#checokut# commitler arası
+#switch# branchler arası
+
+git merge chapter2  (chapter2'nin içindekileri master'in içine taşıdı)
+##Fast-forwarding = master'da commit yapmadan yan branchdeki ilerlemeyi master'a çekmek
+
+Merge made by the 'ort' strategy. (birden fazla branchi mergeledik ve yeni bir commit altında birleştirdi)
+
+Conflict -> çakışma demek iki branchte de aynı işler olursa bunlar birleştirilince sıkıntı çıkar
+
+#####geriye dönüp silme:         
+
+git revert <commit>  (nerden istersen ordan itibaren yeni bir commit atıyor)
+
+git reset -hard <commit> (siliyor)
+
+git stash (commitlenmemiş değişiklikleri zulaladı)
+git stash list (gösteriyor)
+git stash pop (geri getiriyor)
+
+git tag (etiketlemek)
+git tag 1.0.5 (örnek)
+
+
+#### Github'a atmak için
+
+git remote add origin https:.....
+
+git push origin main
+git push origin master  (maini originle koyduğumuz linke pushla)
+git push origin (bu kısım değişebilir branhleri pushluyorsun)
+
+git clone (github projesini indiriyor)
+
+git fetch (önce kontrol edip ne yapılcaksa sonra karar vermek (değişiklikleri görürsün))
+
+git pull (son halini alıyor getiriyor fetch+merge(direkt çağırıyorsun))
+
+###### Saklı veri tutmak için
+touch .gitignore  (bu bizim yeni olduşturduğumuz dosyayı yok saydırır)
+(oluşan .gitignore dosyasının içine saklamak istediğimiz dosyanın adını .uzantısıyla yazıp kaydediyoruz olay bitiyor)
