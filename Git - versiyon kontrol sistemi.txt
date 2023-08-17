@@ -5,14 +5,16 @@ Git -> versiyon kontrol sistemi (VCS)
 ls -> klasörün içini listeler
 cd .... -> .... klasörünü açar
 
+mkdir -> klasör oluştur
 
 touch text.txt (text.txt oluşturdu)
 
-git log  (commitleri kim ne zaman atmış gösterir)
+git init (git olmayan dosyada git açar)
 git status (git ne durumda)
 git add  (git e ekleme yapar)
 git commit (commit atılacağı zaman atılır)
-git init (git olmayan dosyada git açar)
+git log  (commitleri kim ne zaman atmış gösterir)
+
 
 git commit -m"mesaj buraya yazılır"
 
@@ -55,13 +57,12 @@ git tag 1.0.5 (örnek)
 
 
 #### Github'a atmak için
+2 adım :
 
-git remote add origin https:.....
+1- git remote add origin https:.....
+2- git push origin main/master  (maini veya master'i originle koyduğumuz linke pushla)
 
-git push origin main
-git push origin master  (maini originle koyduğumuz linke pushla)
 git push origin (bu kısım değişebilir branhleri pushluyorsun)
-
 git clone (github projesini indiriyor)
 
 git fetch (önce kontrol edip ne yapılcaksa sonra karar vermek (değişiklikleri görürsün))
