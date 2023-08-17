@@ -2,6 +2,10 @@ Git -> versiyon kontrol sistemi (VCS)
 
 #####git temel kodları
 
+ls -> klasörün içini listeler
+cd .... -> .... klasörünü açar
+
+
 touch text.txt (text.txt oluşturdu)
 
 git log  (commitleri kim ne zaman atmış gösterir)
